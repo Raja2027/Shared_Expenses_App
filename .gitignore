@@ -1,0 +1,8 @@
+.env
+backend/.env
+backend/logs/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+postgres_data/
