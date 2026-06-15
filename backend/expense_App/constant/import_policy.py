@@ -20,7 +20,7 @@ SUPPORTED_SPLIT_TYPES = {"equal", "unequal", "percentage", "share"}
 
 FX_RATES_TO_INR = {
     "INR": Decimal("1.00"),
-    "USD": Decimal("83.00"),
+    "USD": Decimal("96.00"),
 }
 
 PERSON_ALIASES = {
