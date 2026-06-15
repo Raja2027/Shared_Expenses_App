@@ -64,6 +64,43 @@ docker-compose up -d
 
 ---
 
+## 🌐 Production Deployment Guide
+
+You can easily deploy this full-stack application for free using **Render** (for the Backend and Database) and **Vercel** (for the Frontend).
+
+### 1. Database (PostgreSQL)
+1. Sign up/log in to [Render](https://render.com/).
+2. Click **New** -> **PostgreSQL**.
+3. Name your database (e.g., `shared-expenses-db`) and click **Create Database**.
+4. Once created, copy the **Internal Database URL** or **External Database URL**.
+
+### 2. Backend (FastAPI Web Service)
+1. In Render, click **New** -> **Web Service**.
+2. Connect your GitHub repository.
+3. Configure the following settings:
+   * **Root Directory**: `backend` (or leave blank if building from root, but setting `backend` is cleaner)
+   * **Runtime**: `Python`
+   * **Build Command**: `pip install -r requirements.txt`
+   * **Start Command**: `python init_db.py && uvicorn main:app --host 0.0.0.0 --port $PORT`
+4. Add the following **Environment Variables** in the Service Dashboard:
+   * `DATABASE_URL`: *[Paste your PostgreSQL URL from Step 1]*
+   * `JWT_SECRET_KEY`: *[Insert a secure random string]*
+   * `CORS_ORIGINS`: `https://your-frontend-domain.vercel.app` *(update this after creating the frontend)*
+5. Click **Deploy Web Service**.
+
+### 3. Frontend (Vite + React SPA)
+1. Log in to [Vercel](https://vercel.com/).
+2. Click **Add New** -> **Project** and select your GitHub repository.
+3. Configure the project:
+   * **Framework Preset**: `Vite` (Auto-detected)
+   * **Root Directory**: `frontend`
+4. Add the following **Environment Variable**:
+   * `VITE_API_BASE`: `https://your-backend-service.onrender.com/api/v1` *(replace with your Render Web Service URL)*
+5. Click **Deploy**.
+6. Once deployed, copy your Vercel frontend URL, go back to your Render backend environment variables, and update `CORS_ORIGINS` with it.
+
+---
+
 ## 🛠️ Tech Stack & Architecture
 
 *   **Frontend**: React.js, React Router, Context API (for Auth), Vanilla CSS Variables (Aesthetics: glassmorphism, dark navy theme, high contrast badges).

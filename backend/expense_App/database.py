@@ -26,7 +26,12 @@ def load_env_file() -> None:
 
 
 def get_database_url() -> str:
-    return os.getenv("DATABASE_URL", DEFAULT_DATABASE_URL)
+    url = os.getenv("DATABASE_URL", DEFAULT_DATABASE_URL)
+    if url.startswith("postgres://"):
+        url = url.replace("postgres://", "postgresql+psycopg2://", 1)
+    elif url.startswith("postgresql://"):
+        url = url.replace("postgresql://", "postgresql+psycopg2://", 1)
+    return url
 
 
 load_env_file()
