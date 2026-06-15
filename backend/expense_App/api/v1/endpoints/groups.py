@@ -15,7 +15,7 @@ from expense_App.schemas.group import (
 )
 
 
-router = APIRouter()
+router = APIRouter(prefix="/groups")
 
 
 @router.post(

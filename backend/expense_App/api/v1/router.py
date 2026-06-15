@@ -8,6 +8,6 @@ from expense_App.api.v1.endpoints.imports import router as imports_router
 
 router = APIRouter()
 router.include_router(auth_router, prefix="/auth", tags=["Auth"])
-router.include_router(groups_router, prefix="/groups", tags=["Groups"])
+router.include_router(groups_router, tags=["Groups"])
 router.include_router(imports_router, prefix="/groups", tags=["Imports"])
 router.include_router(health_router, prefix="/health", tags=["Health"])
