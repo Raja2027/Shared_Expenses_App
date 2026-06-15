@@ -1,0 +1,1868 @@
+2026-06-13 19:20:37,563 | INFO | __main__ | Starting CSV import preview for C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_data\Expenses Export.csv
+2026-06-13 19:20:37,563 | INFO | __main__ | Completed CSV import preview for C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_data\Expenses Export.csv: rows=42 anomalies=35 status=needs_review
+2026-06-13 19:20:47,550 | INFO | expense_App.components.import_pipeline | Starting CSV import preview for missing.csv
+2026-06-13 19:20:47,550 | ERROR | expense_App.components.import_pipeline | Controlled import preview failure for missing.csv
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\import_pipeline.py", line 72, in preview
+    raw_rows = self._read_csv(path)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\import_pipeline.py", line 222, in _read_csv
+    raise ImportPipelineError(
+expense_App.exception.import_exceptions.ImportPipelineError: csv_file_not_found: CSV file does not exist. | details={'csv_path': 'missing.csv'}
+2026-06-13 19:21:13,892 | INFO | expense_App.components.import_pipeline | Starting CSV import preview for expense_data\Expenses Export.csv
+2026-06-13 19:21:13,898 | INFO | expense_App.components.import_pipeline | Completed CSV import preview for expense_data\Expenses Export.csv: rows=42 anomalies=35 status=needs_review
+2026-06-13 19:21:13,899 | INFO | expense_App.components.import_pipeline | Starting CSV import preview for missing.csv
+2026-06-13 19:21:13,899 | WARNING | expense_App.components.import_pipeline | Controlled import preview failure for missing.csv: csv_file_not_found: CSV file does not exist. | details={'csv_path': 'missing.csv'}
+2026-06-14 17:45:23,216 | INFO | __main__ | Applying database migrations to head
+2026-06-14 17:49:05,554 | INFO | main | Starting Shared Expenses API version=0.1.0 environment=development
+2026-06-14 17:49:26,484 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/live status=200 request_id=6f6ef636-debf-4e49-a8da-941005f22cf4 duration_ms=3.49
+2026-06-14 17:49:26,502 | INFO | expense_App.middleware | Request completed method=GET path=/ status=200 request_id=verification-request duration_ms=1.48
+2026-06-14 17:49:26,519 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/live status=200 request_id=verification-request duration_ms=0.98
+2026-06-14 17:49:26,544 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/ready status=200 request_id=verification-request duration_ms=22.17
+2026-06-14 17:49:26,560 | INFO | expense_App.middleware | Request completed method=GET path=/openapi.json status=200 request_id=verification-request duration_ms=0.94
+2026-06-14 17:49:26,572 | INFO | expense_App.middleware | Request completed method=GET path=/not-found status=404 request_id=68367198-5d70-4ee2-a383-e49db0695aa6 duration_ms=0.21
+2026-06-14 17:49:34,375 | INFO | expense_App.middleware | Request completed method=GET path=/not-found status=404 request_id=d0ada26e-3905-4ce2-9870-c0e71ef703ac duration_ms=0.18
+2026-06-14 17:50:14,385 | INFO | main | Starting Shared Expenses API version=0.1.0 environment=development
+2026-06-14 17:50:23,017 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/ready status=200 request_id=602728d5-dd7e-46e5-ae57-da9ad379be96 duration_ms=34.27
+2026-06-14 17:50:24,469 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/ready status=200 request_id=8c2c653c-23be-4df9-9dbe-aee79ce508dd duration_ms=3.02
+2026-06-14 17:50:49,634 | ERROR | expense_App.api.v1.endpoints.health | PostgreSQL readiness check failed
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1319, in _checkout
+    raise exc.InvalidatePoolError()
+sqlalchemy.exc.InvalidatePoolError: ()
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1353, in _checkout
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1350, in _checkout
+    fairy._connection_record.get_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 837, in get_connection
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\api\v1\endpoints\health.py", line 35, in readiness_check
+    with engine.connect() as connection:
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3295, in connect
+    return self._connection_cls(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2450, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1353, in _checkout
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1350, in _checkout
+    fairy._connection_record.get_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 837, in get_connection
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-14 17:50:49,634 | WARNING | expense_App.exception.handlers | Controlled application error request_id=92224ef6-c389-4703-94bd-da4483b1b6dc code=database_unavailable path=/api/v1/health/ready
+2026-06-14 17:50:49,643 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/ready status=503 request_id=92224ef6-c389-4703-94bd-da4483b1b6dc duration_ms=4073.06
+2026-06-14 17:51:49,087 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/ready status=200 request_id=d50216f5-7349-4d70-b4d3-1948b87a0157 duration_ms=11.71
+2026-06-14 17:53:16,378 | INFO | main | Starting Shared Expenses API version=0.1.0 environment=development
+2026-06-14 17:53:26,559 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/ready status=200 request_id=633e9e14-f86d-4205-bb22-8dcc51b1d97c duration_ms=50.30
+2026-06-14 17:53:26,582 | INFO | expense_App.middleware | Request completed method=GET path=/ status=200 request_id=4610e846-b1d0-4f04-b527-f138b275757d duration_ms=1.14
+2026-06-14 17:53:26,616 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/live status=200 request_id=070e414a-b0cf-407e-aba0-b6087bf1c64e duration_ms=1.11
+2026-06-14 17:53:26,619 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/ready status=200 request_id=fbcb823b-d82e-4792-ada1-3eb21f889ee5 duration_ms=3.76
+2026-06-14 17:53:26,623 | INFO | expense_App.middleware | Request completed method=GET path=/docs status=200 request_id=ae8b4b58-0a24-4b7b-b61b-b791c69afb5e duration_ms=0.16
+2026-06-14 17:53:26,639 | INFO | expense_App.middleware | Request completed method=GET path=/openapi.json status=200 request_id=04e21673-fb19-4b47-a20c-3d991bf75c12 duration_ms=6.83
+2026-06-14 17:53:26,643 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/health/live status=200 request_id=82a67f0b-4926-46fb-88d6-bb0f6d6688d2 duration_ms=0.12
+2026-06-14 17:54:54,461 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/live status=200 request_id=f0c1bce6-aadd-47cf-8586-dd418ded4e37 duration_ms=0.90
+2026-06-14 17:54:54,633 | INFO | expense_App.middleware | Request completed method=GET path=/ status=200 request_id=14aa205f-0588-4d7b-8cc1-1bd71452aaff duration_ms=1.30
+2026-06-14 17:54:54,644 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/live status=200 request_id=45ff0608-a8ab-4e77-b1d2-54f10aa783bb duration_ms=1.59
+2026-06-14 17:54:54,650 | INFO | expense_App.middleware | Request completed method=GET path=/docs status=200 request_id=7dd7c940-ce4d-48ce-a75f-0545fa2b5ebc duration_ms=0.80
+2026-06-14 17:54:54,657 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/ready status=200 request_id=f11220e3-6db9-4f1a-8374-7c3412f92b69 duration_ms=8.66
+2026-06-14 17:54:56,746 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/ready status=200 request_id=b1ca4a55-807c-4b5a-a66d-bea516680ead duration_ms=4.24
+2026-06-14 17:54:56,755 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/ready status=200 request_id=419261fa-a42f-428b-a42f-a51a2b8b580b duration_ms=13.86
+2026-06-14 17:54:56,821 | INFO | expense_App.middleware | Request completed method=GET path=/ status=200 request_id=9c614286-63fe-4628-9d41-17a07b3eea88 duration_ms=0.75
+2026-06-14 17:54:56,821 | INFO | expense_App.middleware | Request completed method=GET path=/docs status=200 request_id=59e3bf84-e3e4-4fa7-a3fb-b97f76b9a44f duration_ms=0.50
+2026-06-14 17:54:56,829 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/live status=200 request_id=9fc89747-2235-4394-a494-754164294ea8 duration_ms=3.12
+2026-06-14 17:54:56,829 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/ready status=200 request_id=c6aee69c-64cd-468a-9019-91cd21da4766 duration_ms=3.46
+2026-06-14 17:54:58,090 | INFO | expense_App.middleware | Request completed method=GET path=/docs status=200 request_id=1dea19ec-4901-4934-b045-3d2f598a65b9 duration_ms=0.64
+2026-06-14 17:54:58,090 | INFO | expense_App.middleware | Request completed method=GET path=/docs status=200 request_id=5993589e-14c6-49c4-98f3-69796f2361cc duration_ms=1.38
+2026-06-14 17:54:58,189 | INFO | expense_App.middleware | Request completed method=GET path=/ status=200 request_id=04d92fa9-ce18-485b-8094-91c4c47de130 duration_ms=1.19
+2026-06-14 17:54:58,193 | INFO | expense_App.middleware | Request completed method=GET path=/docs status=200 request_id=ff77bbce-81fd-49bc-8102-de38df736d8a duration_ms=0.89
+2026-06-14 17:54:58,196 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/live status=200 request_id=11b9cba3-b853-46b3-a6f9-bc14a77f4349 duration_ms=3.08
+2026-06-14 17:54:58,198 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/ready status=200 request_id=d63c7cb4-a3a8-4922-9268-618d96c52899 duration_ms=6.02
+2026-06-14 17:54:58,309 | INFO | expense_App.middleware | Request completed method=GET path=/openapi.json status=200 request_id=327eb57e-cbee-4f25-9382-353e632a244b duration_ms=0.19
+2026-06-14 18:01:23,258 | INFO | main | Starting Shared Expenses API version=0.1.0 environment=development
+2026-06-14 18:01:23,258 | INFO | main | Stopping Shared Expenses API
+2026-06-14 18:01:40,950 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/ready status=200 request_id=6047bc25-fcf2-4b4d-9fc4-04d35f94d305 duration_ms=3.71
+2026-06-14 18:01:41,000 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/register status=404 request_id=d5a6abff-aa8f-4c95-948d-400d74d93d2e duration_ms=0.37
+2026-06-14 18:01:41,183 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/register status=404 request_id=610f3cce-e298-4f56-a12b-1820f958bfa9 duration_ms=0.19
+2026-06-14 18:01:41,197 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/login status=404 request_id=b22db33d-4f64-49eb-9768-058245e60c78 duration_ms=0.18
+2026-06-14 18:01:41,208 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/login status=404 request_id=9b2bbf40-0022-4597-a31a-507a477462ac duration_ms=0.20
+2026-06-14 18:01:41,208 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/auth/me status=404 request_id=6a81dae8-16f9-4fb5-8ae9-acee29683c4a duration_ms=0.16
+2026-06-14 18:01:41,208 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/auth/me status=404 request_id=39f67a41-7b13-4e1d-ad4e-ee18e2b80238 duration_ms=0.15
+2026-06-14 18:01:53,244 | INFO | expense_App.middleware | Request completed method=GET path=/openapi.json status=200 request_id=4cbe8a4a-1471-4dca-a746-380d91596625 duration_ms=0.27
+2026-06-14 18:02:15,112 | INFO | main | Starting Shared Expenses API version=0.1.0 environment=development
+2026-06-14 18:02:21,000 | INFO | expense_App.middleware | Request completed method=GET path=/openapi.json status=200 request_id=77ce831f-ce88-44d8-9a6d-4c63bc80a78c duration_ms=29.14
+2026-06-14 18:02:42,999 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/register status=201 request_id=bf5793be-43c6-425e-9575-e23efbc63e67 duration_ms=298.50
+2026-06-14 18:02:43,041 | WARNING | expense_App.exception.handlers | Controlled application error request_id=2697a601-8472-4b14-a420-7772a254ae51 code=email_already_registered path=/api/v1/auth/register
+2026-06-14 18:02:43,041 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/register status=409 request_id=2697a601-8472-4b14-a420-7772a254ae51 duration_ms=5.94
+2026-06-14 18:02:43,263 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/login status=200 request_id=42381c49-b6ad-4618-adaf-a0ded45ab1d9 duration_ms=206.57
+2026-06-14 18:02:43,475 | WARNING | expense_App.exception.handlers | Controlled application error request_id=4bbb4714-64e3-407d-b02a-6a7581fbbff8 code=invalid_credentials path=/api/v1/auth/login
+2026-06-14 18:02:43,475 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/login status=401 request_id=4bbb4714-64e3-407d-b02a-6a7581fbbff8 duration_ms=199.60
+2026-06-14 18:02:43,480 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/auth/me status=401 request_id=5806029d-6098-466c-a383-9b5350650047 duration_ms=0.52
+2026-06-14 18:02:43,487 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/auth/me status=200 request_id=37adf261-a0eb-4f21-a59e-34c7c95b133c duration_ms=5.24
+2026-06-14 18:03:08,079 | INFO | main | Starting Shared Expenses API version=0.1.0 environment=development
+2026-06-14 18:03:21,090 | INFO | expense_App.middleware | Request completed method=GET path=/openapi.json status=200 request_id=57213b07-442b-42f4-aece-bc81a718aa9b duration_ms=19.90
+2026-06-14 18:03:21,434 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/login status=200 request_id=8b5073fa-4f90-4019-b82e-8d8a84841b12 duration_ms=291.55
+2026-06-14 18:03:21,450 | WARNING | expense_App.exception.handlers | Controlled application error request_id=2cc9c601-f896-45eb-8d48-cc4cc3851fa0 code=authentication_required path=/api/v1/auth/me
+2026-06-14 18:03:21,450 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/auth/me status=401 request_id=2cc9c601-f896-45eb-8d48-cc4cc3851fa0 duration_ms=1.99
+2026-06-14 18:03:21,458 | WARNING | expense_App.exception.handlers | Controlled application error request_id=475c4a5d-15e3-42f8-86d8-ea18e3a3a260 code=invalid_access_token path=/api/v1/auth/me
+2026-06-14 18:03:21,458 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/auth/me status=401 request_id=475c4a5d-15e3-42f8-86d8-ea18e3a3a260 duration_ms=1.32
+2026-06-14 18:03:21,473 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/auth/me status=200 request_id=0a38147d-59fd-4be7-8171-d2469e80ef63 duration_ms=3.98
+2026-06-14 18:03:47,346 | INFO | expense_App.middleware | Request completed method=GET path=/docs status=200 request_id=6c1dd855-9f58-4f1a-87cc-3ca0218367f4 duration_ms=0.54
+2026-06-14 18:03:47,412 | INFO | expense_App.middleware | Request completed method=GET path=/docs status=200 request_id=ea307557-b496-4b0f-b021-dc820f037d36 duration_ms=0.20
+2026-06-14 18:03:47,700 | INFO | expense_App.middleware | Request completed method=GET path=/openapi.json status=200 request_id=11832fa1-696d-49a8-9e55-98c63f289003 duration_ms=0.49
+2026-06-14 18:03:47,728 | INFO | expense_App.middleware | Request completed method=GET path=/ status=200 request_id=7f36b7f8-03f5-4547-b0d5-73e0436e4995 duration_ms=3.09
+2026-06-14 18:03:47,737 | INFO | expense_App.middleware | Request completed method=GET path=/docs status=200 request_id=e6318caa-5863-4e21-ae9e-7b8937d82bbe duration_ms=0.40
+2026-06-14 18:03:47,750 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/live status=200 request_id=d842bff8-4731-4165-83fd-ff7c491ed5eb duration_ms=7.40
+2026-06-14 18:03:47,758 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/ready status=200 request_id=d35d12c2-7384-48d7-a4d3-cadd42844938 duration_ms=13.16
+2026-06-14 18:07:25,840 | INFO | main | Starting Shared Expenses API version=0.1.0 environment=development
+2026-06-14 18:08:01,389 | INFO | expense_App.middleware | Request completed method=GET path=/openapi.json status=200 request_id=140002b6-2dd4-4e8f-a848-f657598d0945 duration_ms=67.19
+2026-06-14 18:08:01,723 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/register status=201 request_id=8eb72314-a8d4-46b9-837b-c591669f4aa0 duration_ms=273.36
+2026-06-14 18:08:01,947 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/login status=200 request_id=3c35e9ef-dc07-442a-98d1-34d5ce8b787b duration_ms=208.49
+2026-06-14 18:08:01,964 | WARNING | expense_App.exception.handlers | Controlled application error request_id=82c775e4-8279-44df-998d-7752cd2540d9 code=authentication_required path=/api/v1/groups
+2026-06-14 18:08:01,964 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups status=401 request_id=82c775e4-8279-44df-998d-7752cd2540d9 duration_ms=2.67
+2026-06-14 18:08:01,993 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups status=201 request_id=d468decb-15fe-4696-93ca-c93b58c15a4b duration_ms=16.28
+2026-06-14 18:08:02,047 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups/1/members status=201 request_id=f1f043bc-9ea3-4027-8522-55f261289f38 duration_ms=34.60
+2026-06-14 18:08:02,082 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups/1/members status=201 request_id=bc1d9094-6da9-4b60-8b27-70b0a3f4373c duration_ms=24.96
+2026-06-14 18:08:02,113 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups/1/members status=201 request_id=bd0853eb-1b69-4c68-9be8-2c7ccd70ba59 duration_ms=24.32
+2026-06-14 18:08:02,142 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups/1/members status=201 request_id=f6373b50-7a94-4406-a3e1-b6d97b0bfc06 duration_ms=19.33
+2026-06-14 18:08:02,173 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups/1/members status=201 request_id=77683ad4-63be-4249-80be-833ddb97000a duration_ms=19.05
+2026-06-14 18:08:02,197 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/1/members status=200 request_id=a101a45d-c3a1-4d1a-baaf-837227097e64 duration_ms=12.68
+2026-06-14 18:08:02,286 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups/1/members/3/aliases status=201 request_id=ae622794-f1da-43c6-bed2-729d0a824ad3 duration_ms=27.23
+2026-06-14 18:08:02,305 | WARNING | expense_App.exception.handlers | Controlled application error request_id=523511e8-c6e1-46af-b2b7-f818aa254a33 code=member_already_exists path=/api/v1/groups/1/members
+2026-06-14 18:08:02,305 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups/1/members status=409 request_id=523511e8-c6e1-46af-b2b7-f818aa254a33 duration_ms=8.68
+2026-06-14 18:08:02,339 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups status=200 request_id=81743d5a-c43b-4f69-9670-babb45faa822 duration_ms=8.82
+2026-06-14 18:11:18,472 | INFO | main | Starting Shared Expenses API version=0.1.0 environment=development
+2026-06-14 18:11:38,061 | INFO | expense_App.middleware | Request completed method=GET path=/openapi.json status=200 request_id=590fc1b1-5fda-4133-9504-259dc7a790e0 duration_ms=57.08
+2026-06-14 18:11:38,373 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/register status=201 request_id=2eb376a4-d591-40d2-ad5c-5d57a0ace97d duration_ms=252.59
+2026-06-14 18:11:38,593 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/login status=200 request_id=7ac3c16b-598f-45a7-b8d5-df374531f74b duration_ms=203.12
+2026-06-14 18:11:38,619 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups status=201 request_id=b375442f-f4de-41d9-99ba-9d471141359b duration_ms=12.58
+2026-06-14 18:11:38,636 | WARNING | expense_App.exception.handlers | Controlled application error request_id=23870c92-9836-4b0f-bbf8-ee88bbdb903c code=authentication_required path=/api/v1/groups/2/imports
+2026-06-14 18:11:38,636 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups/2/imports status=401 request_id=23870c92-9836-4b0f-bbf8-ee88bbdb903c duration_ms=2.63
+2026-06-14 18:11:38,696 | INFO | expense_App.components.import_pipeline | Starting CSV import preview for C:\Users\Dell\AppData\Local\Temp\tmpcg6y6gu7.csv
+2026-06-14 18:11:38,707 | INFO | expense_App.components.import_pipeline | Completed CSV import preview for C:\Users\Dell\AppData\Local\Temp\tmpcg6y6gu7.csv: rows=42 anomalies=35 status=needs_review
+2026-06-14 18:11:38,707 | INFO | expense_App.components.import_pipeline | Persisting import preview: filename=Expenses Export.csv group_id=2 uploaded_by_user_id=3
+2026-06-14 18:11:38,773 | INFO | expense_App.components.import_pipeline | Persisted import preview: batch_id=1 rows=42 anomalies=35
+2026-06-14 18:11:38,787 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups/2/imports status=201 request_id=28eab62a-5471-4a25-8aab-aa3897ba5095 duration_ms=93.57
+2026-06-14 18:11:38,809 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/2/imports status=200 request_id=3ddf23b4-14eb-4823-baab-7c9d112541fb duration_ms=8.69
+2026-06-14 18:11:38,833 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/2/imports/1 status=200 request_id=9e5ef8d9-c192-4a88-9112-7923c2cfa365 duration_ms=12.14
+2026-06-14 18:22:25,664 | INFO | main | Starting Shared Expenses API version=0.1.0 environment=development
+2026-06-14 18:22:57,715 | INFO | expense_App.middleware | Request completed method=GET path=/openapi.json status=200 request_id=86aeb6ca-7970-488e-8012-455b286f04e5 duration_ms=59.85
+2026-06-14 18:22:58,056 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/register status=201 request_id=1d73dc37-2c32-46ce-8a41-1a93a0523b12 duration_ms=278.60
+2026-06-14 18:22:58,283 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/login status=200 request_id=07c8ef4b-8e68-4057-9de3-4ecac2400ea9 duration_ms=206.64
+2026-06-14 18:22:58,306 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups status=201 request_id=af39865d-81d5-4d90-b093-06b5e815d0b2 duration_ms=13.50
+2026-06-14 18:22:58,399 | INFO | expense_App.components.import_pipeline | Starting CSV import preview for C:\Users\Dell\AppData\Local\Temp\tmp1y_69r2y.csv
+2026-06-14 18:22:58,407 | INFO | expense_App.components.import_pipeline | Completed CSV import preview for C:\Users\Dell\AppData\Local\Temp\tmp1y_69r2y.csv: rows=42 anomalies=35 status=needs_review
+2026-06-14 18:22:58,407 | INFO | expense_App.components.import_pipeline | Persisting import preview: filename=Expenses Export.csv group_id=3 uploaded_by_user_id=4
+2026-06-14 18:22:58,476 | INFO | expense_App.components.import_pipeline | Persisted import preview: batch_id=2 rows=42 anomalies=35
+2026-06-14 18:22:58,486 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups/3/imports status=201 request_id=a9576a4b-fb32-4bcc-8d80-e825df77fc6a duration_ms=98.91
+2026-06-14 18:22:58,516 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/3/imports/2/balances status=200 request_id=a0872905-dd8d-402a-824f-2c0635dee89e duration_ms=13.68
+2026-06-14 18:22:58,601 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/3/imports/2/anomalies/67 status=200 request_id=faab0344-a1a8-4fe3-a9a9-e30de5e0c6c4 duration_ms=37.98
+2026-06-14 18:22:58,692 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/3/imports/2/balances status=200 request_id=0b894b02-b86b-4f1b-b58e-fc4b2402fdd1 duration_ms=10.61
+2026-06-14 18:22:58,729 | WARNING | expense_App.exception.handlers | Controlled application error request_id=9e3f4c7c-86ef-447c-a6a6-36e3515d1747 code=import_anomaly_not_found path=/api/v1/groups/3/imports/2/anomalies/999999
+2026-06-14 18:22:58,731 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/3/imports/2/anomalies/999999 status=404 request_id=9e3f4c7c-86ef-447c-a6a6-36e3515d1747 duration_ms=8.35
+2026-06-14 18:27:46,559 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/ready status=200 request_id=5830f271-b362-4e18-b010-da2ad8cb70f9 duration_ms=4.59
+2026-06-14 18:29:02,051 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/health/ready status=200 request_id=feb92f9a-4920-44d0-bfab-502dc640ec62 duration_ms=3.76
+2026-06-14 18:48:07,754 | INFO | __main__ | Applying database migrations to head
+2026-06-14 18:48:40,023 | INFO | __main__ | Applying database migrations to head
+2026-06-14 18:49:39,257 | INFO | main | Starting Shared Expenses API version=0.1.0 environment=development
+2026-06-14 18:52:40,455 | INFO | main | Stopping Shared Expenses API
+2026-06-14 18:52:55,299 | INFO | main | Starting Shared Expenses API version=0.1.0 environment=development
+2026-06-14 18:52:59,945 | INFO | expense_App.middleware | Request completed method=GET path=/ status=200 request_id=203ab00d-dacd-479b-8e65-d9d4297d9a05 duration_ms=2.44
+2026-06-14 18:52:59,983 | INFO | expense_App.middleware | Request completed method=GET path=/favicon.ico status=404 request_id=969a9cc6-a28f-47c2-b42b-5d8265cdd3fa duration_ms=0.72
+2026-06-14 18:55:17,847 | INFO | main | Starting Shared Expenses API version=0.1.0 environment=development
+2026-06-14 19:12:15,891 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/auth/register status=200 request_id=88aac6f5-f286-454e-8979-195886e3aeaa duration_ms=0.24
+2026-06-14 19:12:16,224 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/register status=201 request_id=3b586670-5902-4118-b028-7ea99dbd1d8a duration_ms=334.87
+2026-06-14 19:12:16,463 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/login status=200 request_id=6b2cae24-a74f-431a-9e89-216e552353cd duration_ms=230.16
+2026-06-14 19:12:16,476 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/auth/me status=200 request_id=98f99853-b12c-4f0f-9acc-746fd97c8c8b duration_ms=0.17
+2026-06-14 19:12:16,492 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/auth/me status=200 request_id=4f283fbd-5bdf-4105-8f64-32fc9150325d duration_ms=10.99
+2026-06-14 19:12:16,506 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups status=200 request_id=378b8b2a-dc04-4b1b-bb65-613819902ac4 duration_ms=0.59
+2026-06-14 19:12:16,506 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups status=200 request_id=cca90776-2fd1-4e56-883c-2dc6bde0df5a duration_ms=1.41
+2026-06-14 19:12:16,529 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups status=200 request_id=9dd1d6d3-06d3-45cf-854c-67b248d12437 duration_ms=15.97
+2026-06-14 19:12:16,538 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups status=200 request_id=628f3c8d-3621-4ed6-a4e6-9f4baa28ddf4 duration_ms=6.81
+2026-06-14 19:12:30,683 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups status=200 request_id=250c7963-2ba2-4dda-a0ef-6d1f4d7408d2 duration_ms=0.23
+2026-06-14 19:12:30,693 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups status=201 request_id=c153fc16-29fb-4c98-abe4-d76b9a4aff56 duration_ms=17.99
+2026-06-14 19:12:30,714 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups status=200 request_id=0817088f-e5b7-47d8-b487-ab5ef313c1a4 duration_ms=8.44
+2026-06-14 19:12:32,720 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4 status=200 request_id=88f27643-eb87-46a8-a7d2-b1fdd87d489a duration_ms=0.30
+2026-06-14 19:12:32,721 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/members status=200 request_id=a4377c29-5cf7-48aa-947d-5ac5d53f58e6 duration_ms=0.18
+2026-06-14 19:12:32,723 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports status=200 request_id=3bf56a5c-b882-4cf8-baeb-fc22ec558ec8 duration_ms=0.13
+2026-06-14 19:12:32,724 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4 status=200 request_id=99e34626-13c8-4b6e-9c4d-dc33d07df8f4 duration_ms=0.33
+2026-06-14 19:12:32,726 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/members status=200 request_id=8c3c093b-04ad-4346-b8c2-3f81b455bead duration_ms=0.50
+2026-06-14 19:12:32,727 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports status=200 request_id=c39be5c2-363b-4154-a6c8-09c6b600ec4c duration_ms=0.35
+2026-06-14 19:12:32,739 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4 status=200 request_id=330fbf58-cf55-4aaf-8d1c-b688399d4771 duration_ms=11.97
+2026-06-14 19:12:32,751 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/imports status=200 request_id=00c334cf-46d1-439b-8007-b842ba63fbd0 duration_ms=13.65
+2026-06-14 19:12:32,759 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/members status=200 request_id=3d907a9c-5852-43a5-839d-b04772f86b48 duration_ms=32.61
+2026-06-14 19:12:32,770 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4 status=200 request_id=de6557de-f86d-4503-a7e1-9658f1a567b9 duration_ms=9.23
+2026-06-14 19:12:32,779 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/imports status=200 request_id=d9155d41-2fa3-441e-a8d4-9a703c3e0390 duration_ms=14.83
+2026-06-14 19:12:32,783 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/members status=200 request_id=9757ee61-b49b-42b3-9586-919fb5f19634 duration_ms=10.52
+2026-06-14 19:12:53,045 | INFO | expense_App.components.import_pipeline | Starting CSV import preview for C:\Users\Dell\AppData\Local\Temp\tmpi8jzu9tr.csv
+2026-06-14 19:12:53,059 | INFO | expense_App.components.import_pipeline | Completed CSV import preview for C:\Users\Dell\AppData\Local\Temp\tmpi8jzu9tr.csv: rows=42 anomalies=35 status=needs_review
+2026-06-14 19:12:53,059 | INFO | expense_App.components.import_pipeline | Persisting import preview: filename=Expenses Export.csv group_id=4 uploaded_by_user_id=5
+2026-06-14 19:12:53,176 | INFO | expense_App.components.import_pipeline | Persisted import preview: batch_id=3 rows=42 anomalies=35
+2026-06-14 19:12:53,205 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups/4/imports status=201 request_id=6443e525-2835-495d-ab73-2f18e11f6229 duration_ms=169.52
+2026-06-14 19:12:53,220 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/imports status=200 request_id=7b71d8ba-bd73-4d9a-a725-bb510b55982a duration_ms=11.55
+2026-06-14 19:14:04,387 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/102 status=200 request_id=e2347afb-2817-4645-87bc-98ebb9f5e164 duration_ms=0.32
+2026-06-14 19:14:04,437 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/102 status=200 request_id=391b8034-4f92-4ee0-8578-61e97cb7891c duration_ms=48.46
+2026-06-14 19:14:09,070 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/103 status=200 request_id=ee78fcb5-f72d-411b-ab01-1ef85374a171 duration_ms=0.17
+2026-06-14 19:14:09,120 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/103 status=200 request_id=f448ceeb-f62f-4a33-bc5b-ef4a42cd3e55 duration_ms=49.31
+2026-06-14 19:14:23,323 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/75 status=200 request_id=bb0d558f-2233-4213-980f-ecfe420b8feb duration_ms=0.23
+2026-06-14 19:14:23,372 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/75 status=200 request_id=06075fff-74f7-46ab-8e74-4164090e1992 duration_ms=51.33
+2026-06-14 19:14:29,892 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/76 status=200 request_id=d1eda1e9-a00f-4c57-bf56-65c38807e842 duration_ms=0.17
+2026-06-14 19:14:29,929 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/76 status=200 request_id=4ccab293-b0e8-4bed-b4d7-df762c5b3acf duration_ms=35.29
+2026-06-14 19:14:31,085 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/78 status=200 request_id=7b5b1db0-8d60-4278-bb5d-16a5e2fc1194 duration_ms=0.29
+2026-06-14 19:14:31,145 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/78 status=200 request_id=f0902d8a-b7cf-4c8c-84b0-5e5013534aef duration_ms=55.08
+2026-06-14 19:14:31,994 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/77 status=200 request_id=40adc986-23d8-4f9e-8355-f10b83d8cf0e duration_ms=0.30
+2026-06-14 19:14:32,070 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/77 status=200 request_id=83b640a5-3d65-4f82-9dd6-eb1e829d1f87 duration_ms=72.65
+2026-06-14 19:14:33,320 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/79 status=200 request_id=abcafb6f-57f6-4173-8499-029ec66b6aa2 duration_ms=0.24
+2026-06-14 19:14:33,386 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/79 status=200 request_id=50035d86-d80b-41e0-aef6-36a101eac117 duration_ms=60.02
+2026-06-14 19:14:35,125 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/80 status=200 request_id=6f19d983-acb0-498b-9265-26090e44261c duration_ms=0.26
+2026-06-14 19:14:35,218 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/80 status=200 request_id=759a4c66-67df-4f59-b6bb-d93cc7f8f472 duration_ms=87.60
+2026-06-14 19:14:37,365 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/84 status=200 request_id=0c189640-6b7a-4624-86c8-e13f63641a2e duration_ms=0.45
+2026-06-14 19:14:37,425 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/84 status=200 request_id=b56a7562-490b-42d1-9d6a-eec157715509 duration_ms=56.56
+2026-06-14 19:14:38,826 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/104 status=200 request_id=b08cd065-4a58-42c8-803d-610983d1951b duration_ms=0.52
+2026-06-14 19:14:38,891 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/104 status=200 request_id=8675976a-732e-4408-b642-28ac246dec30 duration_ms=64.09
+2026-06-14 19:14:40,309 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/86 status=200 request_id=c43291c7-2d26-472f-9a76-cc6784405e4f duration_ms=0.31
+2026-06-14 19:14:40,366 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/86 status=200 request_id=b88a4ec0-56d8-4e37-9693-44d56b26f371 duration_ms=54.48
+2026-06-14 19:14:41,108 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/105 status=200 request_id=34b41b7a-027b-46d1-bbee-8b7072ab2626 duration_ms=0.17
+2026-06-14 19:14:41,166 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/105 status=200 request_id=4f77a2dd-0b19-47f5-8471-bedb29d47706 duration_ms=57.21
+2026-06-14 19:14:44,163 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/88 status=200 request_id=49fd3b81-ce79-483d-a6ee-ae0c8048f357 duration_ms=0.26
+2026-06-14 19:14:44,223 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/88 status=200 request_id=1e6e7812-6de7-4fa0-ac50-fe9de0f5c7f4 duration_ms=55.89
+2026-06-14 19:14:45,688 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/89 status=200 request_id=25288a8a-f2b8-4c38-9ce9-4f3db192790d duration_ms=0.16
+2026-06-14 19:14:45,741 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/89 status=200 request_id=07a46f16-ff44-4fce-8979-9dd8931d1821 duration_ms=50.93
+2026-06-14 19:14:49,543 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/91 status=200 request_id=5ca47529-29f5-41f8-87b9-c33c8a675a2f duration_ms=0.24
+2026-06-14 19:14:49,603 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/91 status=200 request_id=46a4e41a-f941-4e29-8d48-087ba1a418ec duration_ms=57.33
+2026-06-14 19:14:50,304 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/92 status=200 request_id=cec1fcaf-8c21-4b44-a162-8f9dbd8073b8 duration_ms=0.26
+2026-06-14 19:14:50,362 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/92 status=200 request_id=06488e70-0995-41e9-b9a8-d896b2bd83fb duration_ms=55.65
+2026-06-14 19:14:51,070 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/93 status=200 request_id=de590b3f-ee63-4117-ade2-675ca267659e duration_ms=0.30
+2026-06-14 19:14:51,134 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/93 status=200 request_id=f0e566ad-88d0-4c33-80f3-e2de2e57cd85 duration_ms=60.08
+2026-06-14 19:14:51,877 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/94 status=200 request_id=6228b6c0-25f3-457e-b524-c67f7b1565d9 duration_ms=0.30
+2026-06-14 19:14:52,066 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/94 status=200 request_id=b3e4becf-2971-4ca6-b40b-5291f79fe9b1 duration_ms=181.65
+2026-06-14 19:14:52,339 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/95 status=200 request_id=7af904e5-3114-4270-856c-72866dfe176a duration_ms=0.33
+2026-06-14 19:14:52,419 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/95 status=200 request_id=1d7fa563-1fa5-4248-9141-d7ecae51eff9 duration_ms=74.63
+2026-06-14 19:14:53,070 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/96 status=200 request_id=5530d639-9209-4a2e-b0cb-f8c8f8ca91e1 duration_ms=0.29
+2026-06-14 19:14:53,136 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/96 status=200 request_id=073fe3c1-2da0-43ab-a4b6-ca01341368cf duration_ms=59.15
+2026-06-14 19:14:53,480 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/97 status=200 request_id=d77c1738-2af6-41ee-9724-39741aafa746 duration_ms=0.33
+2026-06-14 19:14:53,551 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/97 status=200 request_id=ae144bd4-605a-4039-be30-fcf2be38fca4 duration_ms=64.95
+2026-06-14 19:14:53,835 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/98 status=200 request_id=e72fbb78-7942-45e7-a539-4971f9b4dbd4 duration_ms=0.28
+2026-06-14 19:14:53,914 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/98 status=200 request_id=2597d294-6f49-4e51-844b-8cf0e6271597 duration_ms=74.93
+2026-06-14 19:14:54,170 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/99 status=200 request_id=b927a301-6e89-4ac6-9017-b2ce64408b6e duration_ms=0.26
+2026-06-14 19:14:54,236 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/99 status=200 request_id=c04894b4-9fce-442b-8dd3-cfd9e28e2cdd duration_ms=60.82
+2026-06-14 19:15:53,270 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/100 status=200 request_id=7ef0a100-a28a-44cb-80aa-739858f833cb duration_ms=0.21
+2026-06-14 19:15:53,311 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/100 status=200 request_id=5ea6f491-edb4-4312-8604-76372dc23ad7 duration_ms=41.98
+2026-06-14 19:15:54,407 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/anomalies/101 status=200 request_id=175f3ec3-7bde-4e83-9f9f-ae5639270dcd duration_ms=0.36
+2026-06-14 19:15:54,485 | INFO | expense_App.middleware | Request completed method=PATCH path=/api/v1/groups/4/imports/3/anomalies/101 status=200 request_id=a5342503-60fb-4734-b20d-3f514912fec4 duration_ms=72.41
+2026-06-14 19:16:00,621 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/balances status=200 request_id=b1149bd8-72f5-404e-8b5f-62a5288367e6 duration_ms=0.28
+2026-06-14 19:16:00,648 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/imports/3/balances status=200 request_id=7484067a-9ec8-45cc-a235-1888d5ad01b6 duration_ms=23.68
+2026-06-14 19:18:30,455 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3 status=200 request_id=6020c8ee-b4d1-4602-b2d3-4ad30cf7a8da duration_ms=0.25
+2026-06-14 19:18:30,470 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/imports/3 status=200 request_id=4d2e5a3b-bfc2-45aa-a700-ebbc429d8308 duration_ms=14.89
+2026-06-14 19:18:31,445 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/imports/3 status=200 request_id=e3a92f03-3cd1-4bad-80d0-922b126f5fb0 duration_ms=15.25
+2026-06-14 19:19:06,268 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/members status=200 request_id=e7ec1a33-5123-4eb8-8856-eb3129d622bd duration_ms=0.38
+2026-06-14 19:19:06,320 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups/4/members status=201 request_id=1135e83b-a246-4993-a7fa-8420fa907af7 duration_ms=53.13
+2026-06-14 19:19:06,344 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/members status=200 request_id=b5c6c1de-9dd7-4eef-9941-fb6f2b5798d2 duration_ms=16.40
+2026-06-14 19:19:10,159 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups/4/members status=201 request_id=8ee14d5e-62f1-46d4-b072-1cc281cf10e0 duration_ms=32.61
+2026-06-14 19:19:10,203 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups/4/members status=201 request_id=5641225e-768d-40a7-b980-815093a2d124 duration_ms=39.24
+2026-06-14 19:19:10,245 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups/4/members status=201 request_id=69745caa-01d5-4899-b1cb-3c5bf7488913 duration_ms=37.97
+2026-06-14 19:19:10,283 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/groups/4/members status=201 request_id=b7e371d1-5548-46f3-ad76-8598a7752b89 duration_ms=33.53
+2026-06-14 19:19:10,300 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/members status=200 request_id=a1e7ff32-944c-4dbe-a386-dd273d5a043f duration_ms=16.07
+2026-06-14 19:19:23,469 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/auth/me status=200 request_id=bcbc23d0-8484-4f1a-bbcd-2afebbfdcc8a duration_ms=6.66
+2026-06-14 19:19:23,482 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/auth/me status=200 request_id=6cce26a0-d192-488b-aaa1-8633ee4db6ad duration_ms=10.24
+2026-06-14 19:19:23,494 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4 status=200 request_id=70abf80a-9bc2-427a-bc19-268771f51d14 duration_ms=10.18
+2026-06-14 19:19:23,511 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/members status=200 request_id=2fba749d-3cc7-4cb7-aed3-a891d304f102 duration_ms=14.01
+2026-06-14 19:19:23,523 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/imports status=200 request_id=e9fa4fa4-2ff8-4c56-abba-007f7c83090c duration_ms=9.13
+2026-06-14 19:19:23,531 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4 status=200 request_id=9d4a2e80-b523-4633-ad68-b53a9604cd53 duration_ms=7.53
+2026-06-14 19:19:23,543 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/members status=200 request_id=85b327f8-bed3-4f92-b12a-56fb9c8123e5 duration_ms=12.41
+2026-06-14 19:19:23,552 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/imports status=200 request_id=5f46e3ba-f763-421a-ba08-ae747e028d34 duration_ms=8.41
+2026-06-14 19:19:23,577 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/imports/3 status=200 request_id=194f8212-0460-4f80-9265-4e8f59389257 duration_ms=20.34
+2026-06-14 19:19:23,602 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/imports/3 status=200 request_id=c51ca7af-4612-48da-b408-9f6bef647e76 duration_ms=20.24
+2026-06-14 19:19:59,272 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/imports/3/balances status=200 request_id=39ed3625-2f8d-4b93-b727-e40cae536fd0 duration_ms=16.88
+2026-06-14 20:42:59,031 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/auth/me status=200 request_id=114009d1-6991-4be0-bdca-f08d8b5726e0 duration_ms=2.28
+2026-06-14 20:42:59,037 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/auth/me status=200 request_id=a7acb943-fc6a-4dbd-9e3b-ad713ae6a386 duration_ms=8.14
+2026-06-14 20:42:59,052 | WARNING | expense_App.exception.handlers | Controlled application error request_id=faad0ae0-efb1-4418-873c-8e318e6900a3 code=invalid_access_token path=/api/v1/auth/me
+2026-06-14 20:42:59,053 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/auth/me status=401 request_id=faad0ae0-efb1-4418-873c-8e318e6900a3 duration_ms=13.19
+2026-06-14 20:42:59,060 | WARNING | expense_App.exception.handlers | Controlled application error request_id=6c9ed0c1-9ac6-409b-8849-aa78968eef7e code=invalid_access_token path=/api/v1/auth/me
+2026-06-14 20:42:59,061 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/auth/me status=401 request_id=6c9ed0c1-9ac6-409b-8849-aa78968eef7e duration_ms=3.77
+2026-06-15 09:03:56,408 | INFO | main | Starting Shared Expenses API version=0.1.0 environment=development
+2026-06-15 09:08:17,182 | ERROR | expense_App.middleware | Request failed method=POST path=/api/v1/auth/login request_id=fa644af6-417c-4747-a4cf-92da022b2874 duration_ms=4081.89
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\middleware.py", line 30, in request_logging_middleware
+    response = await call_next(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\api\v1\endpoints\auth.py", line 41, in login_user
+    user = service.authenticate_user(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 56, in authenticate_user
+    user = self.get_user_by_email(normalized_email)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 20, in get_user_by_email
+    return self.db.execute(statement).scalar_one_or_none()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2372, in execute
+    return self._execute_internal(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2260, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2112, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1191, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3295, in connect
+    return self._connection_cls(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2450, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-15 09:08:17,197 | ERROR | expense_App.exception.handlers | Unhandled application error request_id=fa644af6-417c-4747-a4cf-92da022b2874 path=/api/v1/auth/login
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\middleware.py", line 30, in request_logging_middleware
+    response = await call_next(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\api\v1\endpoints\auth.py", line 41, in login_user
+    user = service.authenticate_user(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 56, in authenticate_user
+    user = self.get_user_by_email(normalized_email)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 20, in get_user_by_email
+    return self.db.execute(statement).scalar_one_or_none()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2372, in execute
+    return self._execute_internal(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2260, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2112, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1191, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3295, in connect
+    return self._connection_cls(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2450, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-15 09:08:33,568 | ERROR | expense_App.middleware | Request failed method=POST path=/api/v1/auth/login request_id=8ba6cfee-c247-49b8-b513-f816bc65b397 duration_ms=4056.98
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\middleware.py", line 30, in request_logging_middleware
+    response = await call_next(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\api\v1\endpoints\auth.py", line 41, in login_user
+    user = service.authenticate_user(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 56, in authenticate_user
+    user = self.get_user_by_email(normalized_email)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 20, in get_user_by_email
+    return self.db.execute(statement).scalar_one_or_none()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2372, in execute
+    return self._execute_internal(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2260, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2112, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1191, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3295, in connect
+    return self._connection_cls(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2450, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-15 09:08:33,572 | ERROR | expense_App.exception.handlers | Unhandled application error request_id=8ba6cfee-c247-49b8-b513-f816bc65b397 path=/api/v1/auth/login
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\middleware.py", line 30, in request_logging_middleware
+    response = await call_next(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\api\v1\endpoints\auth.py", line 41, in login_user
+    user = service.authenticate_user(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 56, in authenticate_user
+    user = self.get_user_by_email(normalized_email)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 20, in get_user_by_email
+    return self.db.execute(statement).scalar_one_or_none()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2372, in execute
+    return self._execute_internal(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2260, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2112, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1191, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3295, in connect
+    return self._connection_cls(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2450, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-15 09:09:39,943 | ERROR | expense_App.middleware | Request failed method=POST path=/api/v1/auth/login request_id=13cd531c-b45f-4837-ab0d-782e4869d807 duration_ms=4102.84
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\middleware.py", line 30, in request_logging_middleware
+    response = await call_next(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\api\v1\endpoints\auth.py", line 41, in login_user
+    user = service.authenticate_user(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 56, in authenticate_user
+    user = self.get_user_by_email(normalized_email)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 20, in get_user_by_email
+    return self.db.execute(statement).scalar_one_or_none()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2372, in execute
+    return self._execute_internal(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2260, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2112, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1191, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3295, in connect
+    return self._connection_cls(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2450, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-15 09:09:39,947 | ERROR | expense_App.exception.handlers | Unhandled application error request_id=13cd531c-b45f-4837-ab0d-782e4869d807 path=/api/v1/auth/login
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\middleware.py", line 30, in request_logging_middleware
+    response = await call_next(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\api\v1\endpoints\auth.py", line 41, in login_user
+    user = service.authenticate_user(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 56, in authenticate_user
+    user = self.get_user_by_email(normalized_email)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 20, in get_user_by_email
+    return self.db.execute(statement).scalar_one_or_none()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2372, in execute
+    return self._execute_internal(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2260, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2112, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1191, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3295, in connect
+    return self._connection_cls(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2450, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-15 09:09:52,368 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/auth/register status=200 request_id=96d0c651-2b70-4717-8014-bb745d1c58b4 duration_ms=0.39
+2026-06-15 09:09:56,466 | ERROR | expense_App.middleware | Request failed method=POST path=/api/v1/auth/register request_id=96d1c89c-2201-4675-867d-c9215b357d69 duration_ms=4096.52
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\middleware.py", line 30, in request_logging_middleware
+    response = await call_next(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\api\v1\endpoints\auth.py", line 24, in register_user
+    return AuthService(db).register_user(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 28, in register_user
+    if self.get_user_by_email(normalized_email):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 20, in get_user_by_email
+    return self.db.execute(statement).scalar_one_or_none()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2372, in execute
+    return self._execute_internal(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2260, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2112, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1191, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3295, in connect
+    return self._connection_cls(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2450, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-15 09:09:56,466 | ERROR | expense_App.exception.handlers | Unhandled application error request_id=96d1c89c-2201-4675-867d-c9215b357d69 path=/api/v1/auth/register
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\middleware.py", line 30, in request_logging_middleware
+    response = await call_next(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\api\v1\endpoints\auth.py", line 24, in register_user
+    return AuthService(db).register_user(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 28, in register_user
+    if self.get_user_by_email(normalized_email):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 20, in get_user_by_email
+    return self.db.execute(statement).scalar_one_or_none()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2372, in execute
+    return self._execute_internal(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2260, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2112, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1191, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3295, in connect
+    return self._connection_cls(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2450, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-15 09:10:09,027 | ERROR | expense_App.middleware | Request failed method=POST path=/api/v1/auth/register request_id=8793706d-9e99-4a75-89de-0a20a326b1d0 duration_ms=4090.20
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\middleware.py", line 30, in request_logging_middleware
+    response = await call_next(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\api\v1\endpoints\auth.py", line 24, in register_user
+    return AuthService(db).register_user(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 28, in register_user
+    if self.get_user_by_email(normalized_email):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 20, in get_user_by_email
+    return self.db.execute(statement).scalar_one_or_none()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2372, in execute
+    return self._execute_internal(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2260, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2112, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1191, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3295, in connect
+    return self._connection_cls(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2450, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-15 09:10:09,027 | ERROR | expense_App.exception.handlers | Unhandled application error request_id=8793706d-9e99-4a75-89de-0a20a326b1d0 path=/api/v1/auth/register
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\middleware.py", line 30, in request_logging_middleware
+    response = await call_next(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\api\v1\endpoints\auth.py", line 24, in register_user
+    return AuthService(db).register_user(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 28, in register_user
+    if self.get_user_by_email(normalized_email):
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\expense_App\components\auth_service.py", line 20, in get_user_by_email
+    return self.db.execute(statement).scalar_one_or_none()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2372, in execute
+    return self._execute_internal(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2260, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2112, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1191, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3295, in connect
+    return self._connection_cls(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2450, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 178, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "C:\Users\Dell\Desktop\Shared Expenses App\backend\venv\lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-15 09:16:45,531 | WARNING | expense_App.exception.handlers | Controlled application error request_id=38d57426-1646-4ca3-a934-91d23a5c3704 code=invalid_credentials path=/api/v1/auth/login
+2026-06-15 09:16:45,536 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/login status=401 request_id=38d57426-1646-4ca3-a934-91d23a5c3704 duration_ms=117.82
+2026-06-15 09:17:03,297 | INFO | expense_App.middleware | Request completed method=POST path=/api/v1/auth/login status=200 request_id=3513b872-c102-4ba6-b93c-44eccc8b7318 duration_ms=259.56
+2026-06-15 09:17:03,307 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/auth/me status=200 request_id=541ced49-9f12-42f9-b1c2-09217558e337 duration_ms=0.24
+2026-06-15 09:17:03,319 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/auth/me status=200 request_id=0f67dc5d-ac24-4193-9ec2-8cf4898b8eb1 duration_ms=9.63
+2026-06-15 09:17:03,343 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups status=200 request_id=00423c41-c0b2-40a1-a584-d33b489e18b1 duration_ms=0.22
+2026-06-15 09:17:03,350 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups status=200 request_id=a4aa703f-ee2d-4f0a-9ecd-320c21400055 duration_ms=0.19
+2026-06-15 09:17:03,365 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups status=200 request_id=b5a1a74e-d978-44d6-b8de-596a79cbf607 duration_ms=13.61
+2026-06-15 09:17:03,376 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups status=200 request_id=67b386cf-6ca1-4550-9241-2305a4e3c3d4 duration_ms=7.25
+2026-06-15 09:17:07,445 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4 status=200 request_id=27b9f76a-b39d-4c39-94f0-7ea56167c38b duration_ms=1.81
+2026-06-15 09:17:07,447 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/members status=200 request_id=72e4ff71-f671-4056-88ac-0fb318fd3e4c duration_ms=2.40
+2026-06-15 09:17:07,448 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports status=200 request_id=865a8f6f-1322-4b90-bdc0-b1c8df694c02 duration_ms=2.99
+2026-06-15 09:17:07,449 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4 status=200 request_id=5b514786-7dc9-49e6-b2be-ebacbaa9abb6 duration_ms=3.53
+2026-06-15 09:17:07,452 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/members status=200 request_id=0d847615-ef26-4d0d-8d70-78b3f798642c duration_ms=1.06
+2026-06-15 09:17:07,453 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports status=200 request_id=7e8d2a8d-928f-4756-8b62-a3af03a1bfd4 duration_ms=1.45
+2026-06-15 09:17:07,467 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4 status=200 request_id=0d13093f-d4a6-4f73-b51c-a5fb80ff8dbf duration_ms=14.03
+2026-06-15 09:17:07,484 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/imports status=200 request_id=0c561df0-d8d9-426e-a731-0f896bf93b80 duration_ms=13.85
+2026-06-15 09:17:07,492 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4 status=200 request_id=86b4d0c6-c2c3-40a1-874c-8fbbabf425d3 duration_ms=4.69
+2026-06-15 09:17:07,504 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/imports status=200 request_id=b5c5006b-a020-44af-afdc-a9d703a03bfc duration_ms=12.44
+2026-06-15 09:17:07,515 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/members status=200 request_id=aa2d0fb4-4a96-4700-aa13-28345df42920 duration_ms=59.46
+2026-06-15 09:17:07,520 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3 status=200 request_id=b2e6b93f-e6fb-4802-8355-7634265d9886 duration_ms=0.12
+2026-06-15 09:17:07,533 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/members status=200 request_id=23473c0a-e31d-48fe-a7d0-36a899e72f92 duration_ms=17.04
+2026-06-15 09:17:07,551 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/imports/3 status=200 request_id=e352fbc9-ad46-4a3d-9fca-c670f836df9a duration_ms=31.95
+2026-06-15 09:17:07,573 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/imports/3 status=200 request_id=f1b463d2-0a33-4af2-9969-ad5edcaf876c duration_ms=17.49
+2026-06-15 09:17:24,457 | INFO | expense_App.middleware | Request completed method=OPTIONS path=/api/v1/groups/4/imports/3/balances status=200 request_id=a13c07e9-5e58-4dea-9fc5-a76fee22adf3 duration_ms=0.23
+2026-06-15 09:17:24,480 | INFO | expense_App.middleware | Request completed method=GET path=/api/v1/groups/4/imports/3/balances status=200 request_id=2851e7f2-403b-44f0-b00d-853f87cb6b7b duration_ms=22.93
